@@ -37,7 +37,6 @@ export function renderHero() {
     }
   }
 
-  // Advanced Lua icon animation
   const lua = document.querySelector('.lua-logo-orbit');
   const trail = document.querySelector('.lua-orbit-trail');
   if (lua && trail) {
@@ -54,7 +53,6 @@ export function renderHero() {
       lua.style.top = (28 + y) + 'px';
       lua.style.filter = `drop-shadow(0 0 24px #fff8) drop-shadow(0 0 8px #fff8) brightness(${1.08 + 0.12 * Math.sin(pulse)})`;
       lua.style.transform = `scale(${1 + 0.06 * Math.sin(pulse)}) rotateY(${10 * Math.sin(angle * 2)}deg) rotateX(${8 * Math.cos(angle * 2)}deg)`;
-      // Trailing effect
       trail.style.position = 'absolute';
       trail.style.left = (28 + lastX) + 'px';
       trail.style.top = (28 + lastY) + 'px';
